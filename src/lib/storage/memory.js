@@ -1,10 +1,17 @@
 'use strict';
-const uuid = require('uuid/v4');
+//const uuid = require('uuid/v4');
 
-class MemoryStorage {
-  constructor(schema) {
-    this.schema = schema;
-    this.data = {};
+import uuid from 'uuid/v4';
+
+// class MemoryStorage {
+//   constructor(schema) {
+//     this.schema = schema;
+//     this.data = {};
+//   }
+export default class MemoryStorage {
+  constructor(schema){
+    this.schema =schema;
+    this.data ={};
   }
 
   save(document) {
@@ -39,4 +46,4 @@ class MemoryStorage {
   }
 }
 
-module.exports = MemoryStorage;
+//module.exports = MemoryStorage;
